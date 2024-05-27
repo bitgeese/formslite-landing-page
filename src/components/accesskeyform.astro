@@ -2,15 +2,12 @@
 import Button from "./ui/button.astro";
 ---
 
-<!-- To make this contact form work, create your free access key from https://web3forms.com/
-     Then you will get all form submissions in your email inbox. -->
 <form
   action="https://django-production-14a3.up.railway.app/api/access_keys/"
   method="POST"
   id="form"
   class="needs-validation"
   novalidate>
-  <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <input type="text" class="hidden" name="name" value="test">
   <div class="mb-5">
     <label for="email_address" class="sr-only">Email Address</label><input
@@ -70,7 +67,7 @@ import Button from "./ui/button.astro";
 
     result.innerHTML = "Sending...";
 
-    fetch("https://api.web3forms.com/submit", {
+    fetch("https://django-production-14a3.up.railway.app/api/access_keys/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
