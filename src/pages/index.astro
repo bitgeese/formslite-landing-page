@@ -5,13 +5,25 @@ import Features from "@components/features.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
+import AccessKeyForm from "@components/accesskeyform.astro";
 ---
 
 <Layout title="">
   <Container>
-    <Hero />
-    <Features />
-    <Logos />
-    <Cta />
+    <!-- <Hero />
+    <Features /> -->
+    <div class="mt-64 grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-gray-800">Create Access Key</h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          Access key will be sent to your email address.
+        </p>
+      </div>
+      <div>
+        <AccessKeyForm />
+      </div>
+    </div>
+    <!-- <Logos />
+    <Cta /> -->
   </Container>
 </Layout>
