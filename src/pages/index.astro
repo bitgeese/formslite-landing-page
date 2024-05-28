@@ -29,6 +29,41 @@ import AccessKeyForm from "@components/accesskeyform.astro";
       <div>
         <AccessKeyForm />
       </div>
+
+      <div class="mt-24 col-span-2 text-center">
+        <h2 class="font-medium text-2xl text-gray-800">Create Contact Form</h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          Create your contact form, copy code below for the example
+        </p>
+        <div class="mt-5">
+          <div class="mt-2 text-gray-600">
+            <p>Step 3. Create a form using the example</p>
+            <p>Step 3. Replace with your access key to start getting submissions.</p>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="col-span-2 flex justify-center">
+        <div class="prose">
+          <pre>
+            <code>
+&lt;form action=&quot;https://api.formslite.io/api/submission/&quot; method=&quot;POST&quot;&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;access_key&quot; value=&quot;YOUR_ACCESS_KEY_HERE&quot;&gt;
+
+    &lt;input type=&quot;text&quot; name=&quot;name&quot; required&gt;
+    &lt;input type=&quot;text&quot; name=&quot;website&quot; required&gt;
+    &lt;input type=&quot;email&quot; name=&quot;email&quot; required&gt;
+    &lt;textarea name=&quot;message&quot; required&gt;&lt;/textarea&gt;
+
+    &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+
+&lt;/form&gt;
+            </code>
+          </pre>
+        </div>
+        
+      </div>
     </div>
     <!-- <Logos />
     <Cta /> -->
