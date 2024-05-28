@@ -3,7 +3,7 @@ import Button from "./ui/button.astro";
 ---
 
 <form
-  action="https://api.formslite.io/api/access_keys/"
+  action="https://api.formslite.io/access_keys/"
   method="POST"
   id="form"
   class="needs-validation"
@@ -67,7 +67,7 @@ import Button from "./ui/button.astro";
 
     result.innerHTML = "Sending...";
 
-    fetch("https://api.formslite.io/api/access_keys/", {
+    fetch("https://api.formslite.io/access_keys/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
