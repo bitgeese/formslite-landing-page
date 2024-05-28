@@ -71,31 +71,31 @@ import Button from "./ui/button.astro";
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
+        "Accept": "application/json",
       },
       body: json,
     })
-      .then(async (response) => {
-        let json = await response.json();
-        if (response.status == 200) {
-          result.classList.add("text-green-500");
-          result.innerHTML = json.message;
-        } else {
-          console.log(response);
-          result.classList.add("text-red-500");
-          result.innerHTML = json.message;
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-        result.innerHTML = "Something went wrong!";
-      })
-      .then(function () {
-        form.reset();
-        form.classList.remove("was-validated");
-        setTimeout(() => {
-          result.style.display = "none";
-        }, 5000);
-      });
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status === 201) {
+        result.classList.add("text-green-500");
+        result.innerHTML = "Access key created successfully!";
+      } else {
+        console.log(response);
+        result.classList.add("text-red-500");
+        result.innerHTML = json.message;
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      result.innerHTML = "Something went wrong!";
+    })
+    .finally(() => {
+      form.reset();
+      form.classList.remove("was-validated");
+      setTimeout(() => {
+        result.style.display = "none";
+      }, 5000);
+    });
   });
 </script>
