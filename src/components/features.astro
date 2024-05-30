@@ -4,55 +4,39 @@ import { Icon } from "astro-icon/components";
 
 const features = [
   {
-    title: "No Backend Code",
-    description:
-      "You already know! Setting up form is pain. Web3Forms works without any Server or backend code like PHP.",
-    icon: "bx:bx-code-alt",
+    "title": "Effortless Form Integration",
+    "description": "Skip the server-side hassle. FormsLite.io works without any backend code, making form setup a breeze.",
+    "icon": "bx:bx-code-alt"
   },
   {
-    title: "No Databases",
-    description:
-      "All emails are sent directly to your email address. We never store your form submissions.",
-    icon: "bx:bxs-data",
+    "title": "Direct Email Delivery",
+    "description": "Your form submissions go straight to your inbox. No databases needed, ensuring your data is never stored.",
+    "icon": "bx:bxs-data"
   },
   {
-    title: "No Login Needed",
-    description:
-      "There is no login or dashboard for Web3Forms. We authenticate users based on the access key.",
-    icon: "bx:bxs-user",
+    "title": "Access Key Authentication",
+    "description": "No login or dashboard required. Securely authenticate users with just an access key.",
+    "icon": "bx:bxs-user"
   },
   {
-    title: "Design without Limits",
-    description:
-      "Web3Forms is an API based form backend. We can seamlessly integrate to any custom design or style.",
-    icon: "bx:bxs-palette",
+    "title": "Limitless Design Freedom",
+    "description": "FormsLite.io’s API integrates seamlessly with any custom design or style, offering ultimate flexibility.",
+    "icon": "bx:bxs-palette"
   },
   {
-    title: "Amazon Powered",
-    description:
-      "Our API Systems are powered by Amazon Cloud Infrastructure. High Deliverability and Uptime Guaranteed.",
-    icon: "bx:bxs-cloud",
+    "title": "GDPR Compliant and Secure",
+    "description": "We prioritize your privacy. Only your email address is stored for authentication, with no sharing of information.",
+    "icon": "bx:bxs-check-shield"
   },
   {
-    title: "GDPR Compliant",
-    description:
-      "We only store your email address for authentication. We don’t share or sell any information with 3rd parties.",
-    icon: "bx:bxs-check-shield",
-  },
+    "title": "Customizable Email Branding",
+    "description": "Enjoy minimal branding on form submission emails. Pro users unlock extensive customization options.",
+    "icon": "bx:bxs-envelope"
+  }
 ];
 ---
 
-<div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
-  </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
-  </p>
-</div>
-
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+<div class="mt-16 md:mt-32 grid sm:grid-cols-2 md:grid-cols-2 mt-16 gap-16">
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
