@@ -3,7 +3,7 @@ import Button from "./ui/button.astro";
 ---
 
 <form
-  action="https://api.formslite.io/submission/"
+  action={`${import.meta.env.API_URL}/submission/`}
   method="POST"
   id="form"
   class="needs-validation"
