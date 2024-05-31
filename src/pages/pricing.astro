@@ -11,11 +11,9 @@ const pricing = [
     popular: false,
     features: [
       "Unlimited Forms",
-      "250 Monthly Submissions",
-      "Unlimited Domains",
-      "Advanced Spam Protection",
-      "hCaptcha Integration",
-      "All Basic Features",
+      "300 Submissions per Month",
+      "Basic Spam Protection",
+      "All Core Features"
     ],
     button: {
       text: "See Instructions",
@@ -23,7 +21,7 @@ const pricing = [
     },
   },
   {
-    name: "Startup",
+    name: "Plus",
     price: {
       monthly: "$12",
       annual: "$8",
@@ -33,37 +31,37 @@ const pricing = [
       "All Free Features",
       "Unlimited Submissions",
       "File Attachments",
-      "reCaptcha & Cloudflare Turnstile",
-      "Autoresponders",
-      "Add Trusted Domains",
-      "Webhooks"
+      // "reCaptcha & Cloudflare Turnstile",
+      // "Autoresponders",
+      // "Add Trusted Domains",
+      // "Webhooks"
     ],
     button: {
-      text: "Purchase Pro Plan",
-      link: "#",
+      text: "Purchase Plus Plan",
+      link: "https://buy.stripe.com/cN26oT1jIdd0fw46op",
     },
   },
-  {
-    name: "Agency",
-    price: {
-      monthly: "$20",
-      annual: "$16",
-    },
-    popular: false,
-    features: [
-      "All Pro Features",
-      "Manage multiple clients",
-      "Add up to 20 client emails",
-      "Billed only for main account",
-      "Unlimited Submissions*",
-      "Unlimited Forms",
-      "reCaptcha & Webhooks"
-    ],
-    button: {
-      text: "Purchase Agency Plan",
-      link: "/contact",
-    },
-  },
+  // {
+  //   name: "Agency",
+  //   price: {
+  //     monthly: "$20",
+  //     annual: "$16",
+  //   },
+  //   popular: false,
+  //   features: [
+  //     "All Pro Features",
+  //     "Manage multiple clients",
+  //     "Add up to 20 client emails",
+  //     "Billed only for main account",
+  //     "Unlimited Submissions*",
+  //     "Unlimited Forms",
+  //     "reCaptcha & Webhooks"
+  //   ],
+  //   button: {
+  //     text: "Purchase Agency Plan",
+  //     link: "/contact",
+  //   },
+  // },
 ];
 ---
 
@@ -76,7 +74,7 @@ const pricing = [
       </Fragment>
     </Sectionhead>
 
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-screen-lg mt-12">
       {pricing.map((item) => <PricingCard plan={item} />)}
     </div>
   </Container>
