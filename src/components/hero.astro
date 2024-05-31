@@ -1,41 +1,36 @@
 ---
 import { Picture } from "astro:assets";
-import heroImage from "assets/hero.png";
+import heroImage from "assets/hero-alt.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 hidden md:block">
-    <Picture
-      src={heroImage}
-      alt="Astronaut in the air"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="avif"
-    />
-  </div>
+  class="mt-48 text-center pb-8 md:pb-12">
   <div>
-    <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+
+    <div class="flex justify-center">
+      <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter max-w-3xl">
       Effortless Web Forms for Any Site
     </h1>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Collect form submissions directly in your inbox with our API service. No server setup, no backend coding needed. Start for free today!
-    </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3 items-center">
+    </div>
+
+    <div class="flex justify-center">
+      <p class="text-lg mt-4 text-slate-600 max-w-xl">
+        Collect form submissions directly in your inbox with our API service. No server setup, no backend coding needed. Start for free today!
+      </p>
+    </div>
+
+    <div class="mt-6 flex justify-center sm:flex-row gap-3 items-center">
       <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
-        target="_blank"
+        href="#accesskeyform"
         class="flex gap-1 items-center justify-center"
         rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
-         Create Access Key
-      </Link>
+        Create Access Key
     </div>
+    
+    
     <div class="mt-2 text-slate-600">No Signup required</div>
   </div>
 </main>

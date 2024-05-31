@@ -6,15 +6,25 @@ import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
 import AccessKeyForm from "@components/accesskeyform.astro";
+import Sectionhead from "@components/sectionhead.astro";
 ---
 
 <Layout title="">
   <Container>
-    <!-- <Hero /> -->
+    <Hero />
     <Features />
-    <div class="mt-32 grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+
+    <div id="accesskeyform" class="mt-24">
+      <Sectionhead>
+        <Fragment slot="title">Simple Setup</Fragment>
+        <Fragment slot="desc">
+          Get started effortlessly in few easy steps. Follow our guide and you're good to go.
+        </Fragment>
+      </Sectionhead>
+    </div>
+    <div class="mt-24 grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
       <div>
-        <h2 class="font-medium text-2xl text-gray-800">Create Access Key</h2>
+        <h3 class="font-medium text-2xl text-gray-800">Create Access Key</h3>
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
           Access key will be sent to your email address.
         </p>
@@ -25,13 +35,13 @@ import AccessKeyForm from "@components/accesskeyform.astro";
           </div>
         </div>
       </div>
-      
+
       <div>
         <AccessKeyForm />
       </div>
 
       <div class="mt-24 col-span-2 text-center">
-        <h2 class="font-medium text-2xl text-gray-800">Create Contact Form</h2>
+        <h3 class="font-medium text-2xl text-gray-800">Create Contact Form</h3>
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
           Create your contact form, copy code below for the example
         </p>
@@ -41,9 +51,9 @@ import AccessKeyForm from "@components/accesskeyform.astro";
             <p>Step 3. Replace with your access key to start getting submissions.</p>
           </div>
         </div>
-        
+
       </div>
-      
+
       <div class="col-span-2 flex justify-center">
         <div class="prose">
           <pre>
@@ -62,7 +72,7 @@ import AccessKeyForm from "@components/accesskeyform.astro";
             </code>
           </pre>
         </div>
-        
+
       </div>
     </div>
     <!-- <Logos />
