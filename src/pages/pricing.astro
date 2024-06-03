@@ -82,10 +82,10 @@ const pricing_annual = pricing_base.concat([
       </span>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-screen-lg mt-12">
+    <div x-cloak x-show="!isEnabled" class="grid md:grid-cols-2 gap-10 mx-auto max-w-screen-lg mt-12">
       {pricing_monthly.map((item) => <PricingCard plan={item} />)}
     </div>
-    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-screen-lg mt-12">
+    <div x-cloak x-show="isEnabled" class="grid md:grid-cols-2 gap-10 mx-auto max-w-screen-lg mt-12">
       {pricing_annual.map((item) => <PricingCard plan={item} />)}
     </div>
   </div>
