@@ -7,6 +7,7 @@ import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
 import AccessKeyForm from "@components/accesskeyform.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import codeImage from "assets/code.png";
 ---
 
 <Layout title="">
@@ -22,7 +23,7 @@ import Sectionhead from "@components/sectionhead.astro";
         </Fragment>
       </Sectionhead>
     </div>
-    <div class="mt-24 grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+    <div class="mt-24s md:grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
       <div>
         <h3 class="font-medium text-2xl text-gray-800">Create Access Key</h3>
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
@@ -36,7 +37,7 @@ import Sectionhead from "@components/sectionhead.astro";
         </div>
       </div>
 
-      <div>
+      <div class="mt-2 md:mt-0">
         <AccessKeyForm />
       </div>
 
@@ -45,7 +46,7 @@ import Sectionhead from "@components/sectionhead.astro";
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
           Create your contact form, copy code below for the example
         </p>
-        <div class="mt-5">
+        <div class="mt-6">
           <div class="mt-2 text-gray-600">
             <p>Step 3. Create a form using the example</p>
             <p>Step 3. Replace with your access key to start getting submissions.</p>
@@ -53,26 +54,10 @@ import Sectionhead from "@components/sectionhead.astro";
         </div>
 
       </div>
-
-      <div class="col-span-2 flex justify-center">
-        <div class="prose">
-          <pre>
-            <code>
-&lt;form action=&quot;https://api.formslite.io/submission/&quot; method=&quot;POST&quot;&gt;
-    &lt;input type=&quot;hidden&quot; name=&quot;access_key&quot; value=&quot;YOUR_ACCESS_KEY_HERE&quot;&gt;
-
-    &lt;input type=&quot;text&quot; name=&quot;name&quot; required&gt;
-    &lt;input type=&quot;text&quot; name=&quot;website&quot; required&gt;
-    &lt;input type=&quot;email&quot; name=&quot;email&quot; required&gt;
-    &lt;textarea name=&quot;message&quot; required&gt;&lt;/textarea&gt;
-
-    &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
-
-&lt;/form&gt;
-            </code>
-          </pre>
-        </div>
-
+    </div>
+    <div class="mt-6">
+      <div class="sm:mx-auto sm:max-w-5xl sm:px-8">
+        <img class="rounded-xl shadow-2xl ring-1 ring-gray-900/10" src="code.png" alt="form code example">
       </div>
     </div>
     <!-- <Logos />
