@@ -8,7 +8,7 @@ import Button from "./ui/button.astro";
   id="form"
   class="needs-validation"
   novalidate>
-  <input type="text" class="hidden" name="access_key" value="048eefef-a9ab-4242-83e8-53d22df85227">
+  <input type="text" class="hidden" name="access_key" value="bb25a647-3955-47a3-ba29-c88995e3e0eb">
   <div class="mb-5">
     <input
       type="text"
@@ -59,8 +59,13 @@ import Button from "./ui/button.astro";
       Please enter your message.
     </div>
   </div>
+  
   <Button type="submit" size="lg" block>Send Message</Button>
+
+  <div class="mt-5 h-captcha" data-sitekey="8eb0ceaa-e688-4f94-90dc-f052d0a27eb6"></div>
+  
 </form>
+<script src="https://hcaptcha.com/1/api.js" async defer></script>
 
 <style>
   .invalid-feedback,
