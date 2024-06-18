@@ -7,8 +7,10 @@ import Button from "./ui/button.astro";
   method="POST"
   id="form"
   class="needs-validation"
-  novalidate>
-  <input type="text" class="hidden" name="access_key" value="bb25a647-3955-47a3-ba29-c88995e3e0eb">
+  novalidate
+>
+  <input type="text" class="hidden" name="access_key" value={import.meta.env.FORMSLITE_KEY}>
+  
   <div class="mb-5">
     <input
       type="text"
@@ -21,6 +23,7 @@ import Button from "./ui/button.astro";
       Please provide your full name.
     </div>
   </div>
+  
   <div class="mb-5">
     <input
       type="text"
@@ -32,8 +35,10 @@ import Button from "./ui/button.astro";
       Please provide your full name.
     </div>
   </div>
+  
   <div class="mb-5">
-    <label for="email_address" class="sr-only">Email Address</label><input
+    <label for="email_address" class="sr-only">Email Address</label>
+    <input
       id="email_address"
       type="email"
       placeholder="Email Address"
@@ -48,6 +53,7 @@ import Button from "./ui/button.astro";
       Please provide a valid email address.
     </div>
   </div>
+  
   <div class="mb-3">
     <textarea
       name="message"
@@ -60,12 +66,39 @@ import Button from "./ui/button.astro";
     </div>
   </div>
   
-  <Button type="submit" size="lg" block>Send Message</Button>
-
   <div class="mt-5 h-captcha" data-sitekey="8eb0ceaa-e688-4f94-90dc-f052d0a27eb6"></div>
   
+  <Button type="submit" size="lg" block>Send Message</Button>
 </form>
+
 <script src="https://hcaptcha.com/1/api.js" async defer></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('form');
+
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity() || !validateCaptcha()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      form.classList.add('was-validated');
+    });
+
+    function validateCaptcha() {
+      const hCaptchaResponse = document.querySelector('[name="h-captcha-response"]').value;
+      const captchaContainer = document.querySelector('.h-captcha');
+      if (!hCaptchaResponse) {
+        captchaContainer.classList.add('is-invalid');
+        return false;
+      } else {
+        captchaContainer.classList.remove('is-invalid');
+        return true;
+      }
+    }
+  });
+</script>
 
 <style>
   .invalid-feedback,
@@ -84,5 +117,10 @@ import Button from "./ui/button.astro";
   .is-invalid,
   .was-validated :invalid {
     border-color: #dc3545;
+  }
+
+  .h-captcha.is-invalid {
+    border: 2px solid #dc3545;
+    padding: 10px;
   }
 </style>
