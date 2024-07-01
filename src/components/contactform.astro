@@ -10,6 +10,8 @@ import Button from "./ui/button.astro";
   novalidate
 >
   <input type="text" class="hidden" name="access_key" value={import.meta.env.FORMSLITE_KEY}>
+  <input type="hidden" name="subject" value="New Contact Submission from FormsLite.io">
+
   
   <div class="mb-5">
     <input
