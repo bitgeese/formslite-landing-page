@@ -11,7 +11,8 @@ import Button from "./ui/button.astro";
 >
   <input type="text" class="hidden" name="access_key" value={import.meta.env.FORMSLITE_KEY}>
   <input type="hidden" name="subject" value="New Contact Submission from FormsLite.io">
-  <input type="hidden" name="redirect" value="https://google.com">
+  <input type="checkbox" name="honeycomb" class="hidden" style="display: none;" value="dupa">
+  <!-- <input type="hidden" name="redirect" value="https://google.com"> -->
   
   <div class="mb-5">
     <input
@@ -68,12 +69,12 @@ import Button from "./ui/button.astro";
     </div>
   </div>
   
-  <div class="mt-5 h-captcha" data-sitekey="8eb0ceaa-e688-4f94-90dc-f052d0a27eb6"></div>
+  <!-- <div class="mt-5 h-captcha" data-sitekey="8eb0ceaa-e688-4f94-90dc-f052d0a27eb6"></div> -->
   
   <Button type="submit" size="lg" block>Send Message</Button>
 </form>
 
-<script src="https://hcaptcha.com/1/api.js" async defer></script>
+<!-- <script src="https://hcaptcha.com/1/api.js" async defer></script> -->
 
 <script>
 
