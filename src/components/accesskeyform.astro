@@ -6,6 +6,7 @@ import Button from "./ui/button.astro";
   action={`${import.meta.env.API_URL}/access_keys/`}
   method="POST"
   class="needs-validation"
+  id="contact"
   novalidate>
   <input type="text" class="hidden" name="access_key" value="bb25a647-3955-47a3-ba29-c88995e3e0eb">
   <div class="mb-5">
@@ -53,7 +54,7 @@ import Button from "./ui/button.astro";
 
   window.onload = function() {
         // Reset the form fields when the page loads
-        document.getElementById("form").reset();
+        document.getElementById("contact").reset();
     };
 
   const form = document.getElementById("form");
