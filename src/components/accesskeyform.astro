@@ -6,9 +6,8 @@ import Button from "./ui/button.astro";
   action={`${import.meta.env.API_URL}/access_keys/`}
   method="POST"
   class="needs-validation"
-  id="contact"
   novalidate>
-  <input type="text" class="hidden" name="access_key" value="bb25a647-3955-47a3-ba29-c88995e3e0eb">
+  <input type="text" class="hidden" name="access_key" value={import.meta.env.FORMSLITE_KEY}>
   <div class="mb-5">
     <label for="email_address" class="sr-only">Email Address</label><input
       id="email_address"
